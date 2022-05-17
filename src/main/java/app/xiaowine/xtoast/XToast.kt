@@ -19,7 +19,7 @@ import android.widget.Toast
     private const val LENGTH_LONG = 1
 
     @SuppressLint("ShowToast")
-    fun makeText(context: Context, message: CharSequence, duration: Int = LENGTH_LONG, currentTypeface: Typeface = Typeface.create("sans-serif-condensed", Typeface.NORMAL), textSize: Int = 16, textColor: Int = R.color.textColor, toastIcon: Drawable? = null, allowQueue: Boolean = true,shadow:Float=15f, toastGravity: Int = -1, xOffset: Int = -1, yOffset: Int = -1, isRTL: Boolean = false): Toast {
+    fun makeText(context: Context, message: CharSequence, duration: Int = LENGTH_LONG, currentTypeface: Typeface = Typeface.create("sans-serif-condensed", Typeface.NORMAL), textSize: Int = 16, textColor: Int = R.color.textColor, toastIcon: Drawable? = null, allowQueue: Boolean = true, toastGravity: Int = -1, xOffset: Int = -1, yOffset: Int = -1, isRTL: Boolean = false): Toast {
         val currentToast = Toast.makeText(context, "", duration)
         val toastLayout = LayoutInflater.from(context).inflate(R.layout.toast_layout, null)
         val toastRoot = toastLayout.findViewById<LinearLayout>(R.id.toast_root)
@@ -41,7 +41,7 @@ import android.widget.Toast
         toastTextView.typeface = currentTypeface
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize.toFloat())
         currentToast.view = toastLayout
-        toastLayout.elevation = shadow
+        toastLayout.elevation = 15f
         if (!allowQueue) {
             if (lastToast != null) {
                 lastToast!!.cancel()
