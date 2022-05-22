@@ -9,10 +9,10 @@
     android:orientation="horizontal"
     tools:ignore="UseCompoundDrawables">
 
-    <ImageView
+    <app.xiaowine.xtoast.RoundCornerImageView
         android:id="@+id/toast_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"/>
 
