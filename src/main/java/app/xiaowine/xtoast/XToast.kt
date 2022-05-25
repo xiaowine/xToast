@@ -18,8 +18,8 @@ object XToast {
     private const val LENGTH_LONG = 1
 
     @SuppressLint("ShowToast")
-    fun makeText(context: Context, message: CharSequence, duration: Int = LENGTH_LONG, currentTypeface: Typeface = Typeface.create("sans-serif-condensed", Typeface.NORMAL), textSize: Int = 16, textColor: Int = R.color.textColor, toastIcon: Drawable? = null, elevations: Float = 15f, allowQueue: Boolean = true, toastGravity: Int = -1, xOffsets: Int = -1, yOffsets: Int = -1, isRTL: Boolean = false): Toast {
-
+//    fun makeText(context: Context, message: CharSequence, duration: Int = LENGTH_LONG, currentTypeface: Typeface = Typeface.create("sans-serif-condensed", Typeface.NORMAL), textSize: Int = 16, textColor: Int = R.color.textColor, toastIcon: Drawable? = null, elevations: Float = 15f, allowQueue: Boolean = true, toastGravity: Int = -1, xOffsets: Int = -1, yOffsets: Int = -1, isRTL: Boolean = false): Toast {
+    fun makeText(context: Context, message: CharSequence, duration: Int = LENGTH_LONG, currentTypeface: Typeface = Typeface.create("sans-serif-condensed", Typeface.NORMAL), textSize: Int = 16, textColor: Int = R.color.textColor, toastIcon: Drawable? = null, elevations: Float = 15f, allowQueue: Boolean = true, isRTL: Boolean = false): Toast {
         val toastLayout = View.inflate(context, R.layout.toast_layout, null).apply {
             val toastDrawable = context.resources.getDrawable(R.drawable.toast_frame)
             toastDrawable.setTint(context.resources.getColor(R.color.backgroundColor))
@@ -47,7 +47,7 @@ object XToast {
 
         val currentToast = Toast.makeText(context, "", duration).apply {
             view = toastLayout
-            setGravity(if (toastGravity == -1) gravity else toastGravity, if (xOffset == -1) xOffset else xOffsets, if (yOffset == -1) yOffset else yOffsets)
+//            setGravity(if (toastGravity == -1) gravity else toastGravity, if (xOffset == -1) xOffset else xOffsets, if (yOffset == -1) yOffset else yOffsets)
         }
 
         if (!allowQueue) {
