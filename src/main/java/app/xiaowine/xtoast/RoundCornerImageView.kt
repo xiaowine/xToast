@@ -37,8 +37,8 @@ import android.widget.ImageView
 class RoundCornerImageView(context: Context, attrs: AttributeSet? = null) : ImageView(context, attrs) {
     private var paint: Paint? = null
     private var paint2: Paint? = null
-    private val roundHeight = 15f
-    private val roundWidth = 15f
+    private val roundHeight = 30f
+    private val roundWidth = 30f
 
     init {
         paint = Paint()

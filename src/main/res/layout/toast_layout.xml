@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     tools:ignore="UseCompoundDrawables">
 
-    <ImageView
+    <app.xiaowine.xtoast.RoundCornerImageView
         android:id="@+id/toast_icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -19,6 +19,7 @@
     <TextView
         android:id="@+id/toast_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
 
 </LinearLayout>
