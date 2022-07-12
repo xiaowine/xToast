@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -15,14 +13,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            setProguardFiles(
-                listOf(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro",
-                    "proguard-log.pro"
-                )
-            )
+            isMinifyEnabled = true
+            setProguardFiles(listOf(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro", "proguard-log.pro"))
         }
     }
     compileOptions {
@@ -34,5 +26,4 @@ android {
     }
 }
 
-dependencies {
-}
+dependencies {}
