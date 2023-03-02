@@ -24,6 +24,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.majorVersion
     }
+    namespace = "app.xiaowine.xtoast"
 }
 
 dependencies {}
